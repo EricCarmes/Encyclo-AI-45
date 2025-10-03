@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smartbook - AudioBook</title>
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="ID-0-45-Couverture.jpg" alt="Couverture" style="width: 20%; height: auto; margin-bottom: 20px;">
+
+  <div class="logos">
+    <img src="PLANCHE-1a.jpg" alt="Logo AudioBook" style="width: 5%; height: auto; margin-bottom: 20px;">
+    <img src="Logo_resized.jpg" alt="Logo Encyclo-AI" style="width: 10%; height: auto; margin-bottom: 20px;">
+  </div>
+
+<!-- Bloc bouton Play + potentiomètre vitesse -->
+<div class="player-controls">
+  <!-- Gros bouton Play -->
+  <button id="bigPlayBtn" aria-label="Lire ou mettre en pause le livre audio">▶</button>
+
+  <!-- Bloc vitesse -->
+  <div id="speedControl">
+    <div class="speed-label">Vitesse</div>
+    <div class="speed-knob-wrapper">
+      <input type="range" id="speedKnob" min="0.9" max="1.1" step="0.05" value="1" orient="vertical">
+
+      <!-- Colonne repères alignés -->
+      <div id="speedLabels">
+        <span>++</span>
+        <span>+</span>
+        <span>=</span>
+        <span>-</span>
+        <span>--</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Lecteur audio -->
+  <audio id="audioPlayer" controls></audio>
+
+  <!-- Playlist -->
+  <ul id="playlist">
+    <li><a href="Introduction.mp3" style="font-weight: bold;">INTRODUCTION - LES AGENTS AUTONOMES : UNE RÉVOLUTION TECHNOLOGIQUE EN MARCHE</a></li>
+
+    <li style="font-weight: bold;">Chapitre 1 - INTRODUCTION AUX AGENTS AUTONOMES EN IA</li>
+    <ul>
+      <li><a href="Chapitre1-1.mp3">1.1 - Définition et concepts fondamentaux</a></li>
+      <li><a href="Chapitre1-2.mp3">1.2 - Évolution historique des agents autonomes</a></li>
+      <li><a href="Chapitre1-3.mp3">1.3 - Importance et applications actuelles</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 2 - ARCHITECTURE DES AGENTS AUTONOMES</li>
+    <ul>
+      <li><a href="Chapitre2-1.mp3">2.1 - Modules de perception</a></li>
+      <li><a href="Chapitre2-2.mp3">2.2 - Mécanismes de prise de décision</a></li>
+      <li><a href="Chapitre2-3.mp3">2.3 - Systèmes d'exécution</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 3 - USAGES DES AGENTS AUTONOMES DANS DIVERS SECTEURS</li>
+    <ul>
+      <li><a href="Chapitre3-1.mp3">3.1 - Applications en robotique</a></li>
+      <li><a href="Chapitre3-2.mp3">3.2 - Rôle en finance</a></li>
+      <li><a href="Chapitre3-3.mp3">3.3 - Impact sur le support client</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 4 - DÉFIS ÉTHIQUES ASSOCIÉS AUX AGENTS AUTONOMES</li>
+    <ul>
+      <li><a href="Chapitre4-1.mp3">4.1 - Responsabilité et imputabilité</a></li>
+      <li><a href="Chapitre4-2.mp3">4.2 - Transparence des algorithmes</a></li>
+      <li><a href="Chapitre4-3.mp3">4.3 - Gestion des biais algorithmiques</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 5 - RÔLE DES INGÉNIEURS DANS LA CONCEPTION DES AGENTS AUTONOMES</li>
+    <ul>
+      <li><a href="Chapitre5-1.mp3">5.1 - Compétences nécessaires</a></li>
+      <li><a href="Chapitre5-2.mp3">5.2 - Développement de protocoles de validation</a></li>
+      <li><a href="Chapitre5-3.mp3">5.3 - Intégration de mécanismes d'explicabilité</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 6 - MÉCANISMES DE CONTRÔLE ET D'AUDIT DES AGENTS AUTONOMES</li>
+    <ul>
+      <li><a href="Chapitre6-1.mp3">6.1 - Importance des audits réguliers</a></li>
+      <li><a href="Chapitre6-2.mp3">6.2 - Outils de surveillance proactive</a></li>
+      <li><a href="Chapitre6-3.mp3">6.3 - Gestion des incidents</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 7 - IMPACT DES BIAIS ALGORITHMIQUES SUR LES DÉCISIONS DES AGENTS</li>
+    <ul>
+      <li><a href="Chapitre7-1.mp3">7.1 - Origine des biais</a></li>
+      <li><a href="Chapitre7-2.mp3">7.2 - Conséquences des biais</a></li>
+      <li><a href="Chapitre7-3.mp3">7.3 - Stratégies pour réduire les biais</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 8 - CADRES RÉGLEMENTAIRES ET CONFORMITÉ POUR LES AGENTS AUTONOMES</li>
+    <ul>
+      <li><a href="Chapitre8-1.mp3">8.1 - Normes et standards actuels</a></li>
+      <li><a href="Chapitre8-2.mp3">8.2 - Défis de la mise en conformité</a></li>
+      <li><a href="Chapitre8-3.mp3">8.3 - Évolution des cadres réglementaires</a></li>
+    </ul>
+
+    <li><a href="Conclusion.mp3" style="font-weight: bold;">CONCLUSION - VERS UN AVENIR FAÇONNÉ PAR LES AGENTS AUTONOMES</a></li>
+  </ul>
+
+  <p><a href="ID-0-45-Annexes.pdf" target="_blank">📄 Consulter les annexes du livre</a></p>
+  <p><a href="mentions_legales.pdf">Mentions légales</a></p>
+
+  <script src="plyr.polyfilled.js"></script>
+  <script src="lecteur.js"></script>
+</body>
+</html>
